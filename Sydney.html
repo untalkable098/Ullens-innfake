@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ullens Inn. Sydney</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Times New Roman", Arial, serif;
+      background-color: #f0f8ff;
+      color: #333;
+    }
+
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .slider img {
+      position: absolute;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      transform: translateX(100%);
+      animation: slideOne 12s ease-in-out infinite;
+    }
+
+    .slider img:nth-child(1) { animation-delay: 0s; }
+    .slider img:nth-child(2) { animation-delay: 4s; }
+    .slider img:nth-child(3) { animation-delay: 8s; }
+
+    @keyframes slideOne {
+      0%   { transform: translateX(100%); opacity: 0; }
+      8%   { transform: translateX(0%); opacity: 1; }
+      33%  { transform: translateX(0%); opacity: 1; }
+      41%  { transform: translateX(-100%); opacity: 0; }
+      100% { transform: translateX(-100%); opacity: 0; }
+    }
+
+    .slider-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      padding: 0 20px;
+    }
+
+    .slider-text h1 {
+      margin: 0;
+      font-size: 2.8em;
+      color: #ffeb3b;
+    }
+
+    .slider-text p {
+      margin: 10px 0 0;
+      font-size: 1.3em;
+      color: #ffffff;
+    }
+
+    .tophr {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+
+    .tophr a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
+      color: white;
+      background: linear-gradient(45deg, #4caf50, #81c784);
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    }
+
+    .tophr a:hover {
+      background: linear-gradient(45deg, #388e3c, #66bb6a);
+    }
+
+    .content {
+      width: 90%;
+      margin: 40px auto;
+      line-height: 1.6;
+    }
+
+    .content h2 {
+      color: #ff5722;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      text-align: center;
+      text-shadow: 1px 1px 2px #aaa;
+    }
+
+    .services, .destinations {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .service-box, .destination-box {
+      background: linear-gradient(to bottom right, #e0f7fa, #b2ebf2);
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      width: 260px;
+      padding: 20px;
+      margin: 15px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .service-box:hover, .destination-box:hover {
+      transform: translateY(-8px);
+    }
+
+    .service-box img, .destination-box img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
+    .service-box h3, .destination-box h3 {
+      color: #00796b;
+      margin-bottom: 10px;
+    }
+
+    .service-box p, .destination-box p {
+      font-size: 1em;
+    }
+
+    ul {
+      margin: 20px auto;
+      width: 95%;
+      background-color: #fff3e0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="slider">
+    <div class="tophr">
+      <a href="index.html">Home</a>
+      <a href="about us.html">About Us</a>
+      <a href="Book now.html">Book Now</a>
+      <a href="guides.html">Guides</a>
+    </div>
+
+    <img src="sydney-pictures/sydney.avif" alt="Sydney city">
+    <img src="sydney-pictures/sydney1.avif" alt="Sydney Harbour">
+    <img src="sydney-pictures/opera.avif" alt="Sydney Opera House">
+
+    <div class="slider-text">
+      <h1>Ullens Inn. Sydney</h1>
+      <p>Experience the beauty of Sydney with comfort and luxury with us.</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <h2>About Sydney</h2>
+    <p>
+      Sydney is Australia’s largest city and a vibrant global destination, famous for its stunning harbour,
+      iconic Sydney Opera House, and beautiful beaches.
+    </p>
+
+    <ul>
+      <li>Metro population: About 5,300,000</li>
+      <li>State: New South Wales</li>
+      <li>Founded: 1788</li>
+      <li>Area: 12,367 km²</li>
+      <li>Elevation: 58 m</li>
+      <li>Famous for: Harbour, beaches, and landmarks</li>
+    </ul>
+
+    <h2>Popular Destinations</h2>
+    <div class="destinations">
+      <div class="destination-box">
+        <img src="sydney-pictures/opera.avif" alt="Sydney Opera House">
+        <h3>Sydney Opera House</h3>
+        <p>A world-famous architectural masterpiece.</p>
+      </div>
+
+      <div class="destination-box">
+        <img src="sydney-pictures/harbour.avif" alt="Sydney Harbour Bridge">
+        <h3>Sydney Harbour Bridge</h3>
+        <p>An iconic bridge offering panoramic views.</p>
+      </div>
+
+      <div class="destination-box">
+        <img src="sydney-pictures/bondibeach.jpg" alt="Bondi Beach">
+        <h3>Bondi Beach</h3>
+        <p>One of the world’s most famous beaches.</p>
+      </div>
+
+      <div class="destination-box">
+        <img src="sydney-pictures/darling harbour.avif" alt="Darling Harbour">
+        <h3>Darling Harbour</h3>
+        <p>A lively waterfront entertainment area.</p>
+      </div>
+    </div>
+
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-box">
+        <img src="sydney-pictures/guides sydney.jpg" alt="Guided Tours">
+        <h3>Guided Tours</h3>
+        <p>Explore Sydney with our experienced guides.</p>
+      </div>
+
+      <div class="service-box">
+        <img src="sydney-pictures/luxury.jpg" alt="Luxury Accommodation">
+        <h3>Luxury Accommodation</h3>
+        <p>Enjoy modern rooms with stunning views.</p>
+      </div>
+
+      <div class="service-box">
+        <img src="sydney-pictures/sydney airport.jpg" alt="Airport Pickup">
+        <h3>Airport Pickup</h3>
+        <p>Comfortable and reliable transfers.</p>
+      </div>
+    </div>
+  </div>
+
+  <h1><center>By: Aagam Kafle</center></h1>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f0f0f0 url("hotel2.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking-form {
+    border: 2px solid green;
+    padding: 20px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px;
+    margin-top: 20px; 
+    text-align: center;
+}
+
+.booking-form img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select, input[type="date"], input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    padding: 8px 12px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: darkgreen;
+}
+
+.Rooms{
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    padding:10px;
+}
+
+.spin-btn:hover {
+  background-color: pink;
+}
+
+.spin-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.spin-btn:hover {
+  background-color: maroon;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  border: 6px solid #ccc;
+  border-top: 6px solid red;
+  border-radius: 50%;
+  margin: 20px auto;
+}
+
+</style>
+<Body background="hotel2.jpg">
+</head>
+<body>
+
+    <div class="booking-form">
+    <img src="Book_now-pictures/hotel500.jpg">
+<hr style="border: none; height: 3px; background-color: green; width: 80%; border-radius: 5px; margin: 20px auto;">
+    <label for="destination">Destination:</label>
+    <select id="destination" required>
+        <option>Nepal</option>
+        <option>Shanghai</option>
+        <option>Rome</option>
+        <option>Dubai</option>
+        <option>Washington DC</option>
+        <option>New York</option>
+        <option>Singapore</option>
+        <option>Sydney</option>
+        <option>San Francisco</option>
+        <option>Vancouver</option>
+    </select>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required>
+
+    <div class="Rooms">
+        <label for="rooms">No. of Rooms:</label>
+        <input type="number" id="rooms" name="No_of_Rooms" value="1" min="1" max="10">
+    </div> 
+
+    <a href="https://www.booking.com" class="button">Book Now!</a>
+</div>
+
+<span style="
+    background: green;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+  margin-top: 20px;
+  ">
+    <a href='https://docs.google.com/forms/d/e/1FAIpQLSe0l7v-hrtJY5ZacUjlupH_Y5EeEt_btKuhu5uUquXF-YSHGg/viewform?usp=header' 
+       style='color:white; text-decoration:none;'>
+        Please give us feedback
+    </a>
+  </span>
+  <br>
+<div class="spinner" id="spinner"></div>
+<button class="spin-btn" onclick="spin()">Spin to get Discount!</button>
+
+<div class="result" id="result"></div>
+<script>
+function spin() {
+  const spinner = document.getElementById("spinner");
+  const result = document.getElementById("result");
+  const values = [20, 30, 15, 50, 80];
+
+  result.textContent = ""; 
+  spinner.style.animation = "spin 1s linear infinite";
+
+  setTimeout(() => {
+    spinner.style.animation = "none";
+    const randomValue = values[Math.floor(Math.random() * values.length)];
+    result.textContent = "You got:" + randomValue + "% ";
+  }, 2000);
+}
+</script>
+<p><font color="white" size="3">By: Aagam</font></p>
+</body>
+</html>
+
+
+
+
+
+
